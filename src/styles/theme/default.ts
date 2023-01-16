@@ -11,3 +11,9 @@ export const defaultTheme = {
   "red-500": "#AB222E",
   "red-700": "#7A1921",
 } as const;
+
+export const colorsChakra = {
+  green: {
+    500: "#1BAC4B",
+  },
+};
