@@ -12,9 +12,6 @@ export function ButtonApresentaion(props: ButtonProps) {
   function handleNavigate() {
     navigate(props.path);
   }
-  return (
-    <Button onClick={handleNavigate} colorScheme="green">
-      {props.title}
-    </Button>
-  );
+
+  return <h1>teste</h1>;
 }
