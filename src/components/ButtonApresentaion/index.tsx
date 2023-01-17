@@ -1,17 +1,16 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from "@chakra-ui/react";
+import { Button } from "./style";
 
 interface ButtonProps {
-  title: string;
   path: string;
 }
 
-export function ButtonApresentaion(props: ButtonProps) {
+export function ButtonApresentaion({ path }: ButtonProps) {
   const navigate = useNavigate();
 
-  function handleNavigate() {
-    navigate(props.path);
+  function handleNavigation() {
+    navigate(path);
   }
 
-  return <h1>teste</h1>;
+  return <Button onClick={handleNavigation}>Proximo</Button>;
 }

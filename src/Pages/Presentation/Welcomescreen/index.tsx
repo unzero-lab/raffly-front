@@ -4,7 +4,7 @@ export function Welcomescreen() {
   return (
     <>
       <h1>Welcomescreen</h1>
-      <ButtonApresentaion title="hello word" path="/apresentacao2" />
+      <ButtonApresentaion path="/apresentacao1" />
     </>
   );
 }
