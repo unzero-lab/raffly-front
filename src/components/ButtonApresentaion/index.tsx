@@ -14,7 +14,4 @@ export function ButtonApresentaion({ path }: ButtonProps) {
   }
 
   return <Button onClick={handleNavigation}>Proximo</Button>;
-  function handleNavigate() {
-    navigate(path);
-  }
 }
