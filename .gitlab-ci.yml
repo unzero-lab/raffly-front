@@ -35,7 +35,7 @@ npm:
     - npm install -g npm@latest
   script:
     - npm -v
-    - npm install --no-optional --legacy-peer-deps
+    - npm install
   artifacts:
     paths:
       - node_modules/
