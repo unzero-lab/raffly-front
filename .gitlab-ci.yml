@@ -16,10 +16,33 @@
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 
+image: node
+
+cache:
+  paths:
+    - node_modules/
+
+
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
   - deploy
+
+npm:
+  stage: preparation
+  before_script:
+    - npm install -g npm@latest
+  script:
+    - npm -v
+    - npm install --no-optional --legacy-peer-deps
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 1 days
+    when: always
+  cache:
+    paths:
+      - node_modules/
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
