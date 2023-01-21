@@ -9,9 +9,9 @@ interface ButtonProps {
 export function ButtonApresentaion({ path }: ButtonProps) {
   const navigate = useNavigate();
 
-  function handleNavigation() {
+  function handleNavigate() {
     navigate(path);
   }
 
-  return <Button onClick={handleNavigation}>Proximo</Button>;
+  return <Button onClick={handleNavigate}>Próximo</Button>
 }
