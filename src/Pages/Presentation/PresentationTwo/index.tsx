@@ -5,7 +5,7 @@ import { Img, Main, Paragraph, Text, Title } from "./style";
 export function PresentationTwo() {
   return (
     <Main> 
-      <Img src={ImgApresentationTwo} alt="imagem de apresentação de rifas" />
+      <Img src={ImgApresentationTwo} alt="imagem de apresentação tela 2" />
       <Text>
         <Title>
           Gerencie Números 
