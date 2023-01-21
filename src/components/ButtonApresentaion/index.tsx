@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "./style";
 
+
 interface ButtonProps {
   path: string;
 }
@@ -13,4 +14,7 @@ export function ButtonApresentaion({ path }: ButtonProps) {
   }
 
   return <Button onClick={handleNavigation}>Proximo</Button>;
+  function handleNavigate() {
+    navigate(path);
+  }
 }
