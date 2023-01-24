@@ -1,11 +1,10 @@
+import ImgPresentationOne from "../../../assets/Price-cuate 1.svg";
 import { ButtonApresentaion } from "../../../components/ButtonApresentaion";
-import { Main, Title, Text, Paragraph } from "./style";
+import { Main, Title, Text, Paragraph, Img } from "./style";
 
 export function PresentationOne() {
   return <Main>
-            <img src="src\assets\Price-cuate 1.svg" alt="">
-
-            </img>
+            <Img src={ImgPresentationOne} alt="Imagem de apresentação de rifas" />
             <Text>
               <Title>Crie Suas Rifas</Title>
               <Paragraph>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </Paragraph>
