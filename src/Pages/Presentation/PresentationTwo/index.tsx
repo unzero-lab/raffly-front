@@ -13,7 +13,7 @@ export function PresentationTwo() {
         <Paragraph>
           is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
         </Paragraph>
-        <ButtonApresentaion title="Próximo" path="/apresentacao3" />
+        <ButtonApresentaion path="/apresentacao3" />
       </Text>
     </Main>
   )
