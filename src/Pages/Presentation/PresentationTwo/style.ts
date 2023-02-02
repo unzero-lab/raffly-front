@@ -2,7 +2,7 @@ import { Center } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const Main = styled.main`
-  max-width: 800x;
+  max-width: 800px;
   height: 100vg
   width: 100%
   margin: 0 auto;
