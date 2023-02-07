@@ -1,16 +1,17 @@
 import { Center } from "@chakra-ui/react";
 import styled from 'styled-components';
+import { UserIcon, LockIcon } from 'phosphor-icons';
 
 export const Main = styled.div`
-  max-width: 800x;
-  height: 100vg
-  width: 100%
-  margin: 0 auto;
-  padding: 0px 18px;
+  width: 100vw; 
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  padding: 0px 18px;
+
 `;
 
 export const Img = styled.img`
@@ -42,24 +43,6 @@ export const Form = styled.form`
   width: 300px;
 `;
 
-export const InputContainer = styled.div`
-  background: white;
-  padding: 5px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #DCDCDC;
-  width: 100%;
-  margin-top: 20px;
-  color: #A0AEC0;
-  border-radius: 5px;
-`;
-
-
-export const Icon = styled.div`
-  font-size: 20px;
-  margin-right: 10px;
-`;
 
 export const Input = styled.input`
   display: flex;
@@ -77,6 +60,20 @@ export const Input = styled.input`
     color: #A0AEC0;
   }
   
+`;
+
+export const UserInput = styled(Input)`
+  padding-left: 40px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-image: url(${UserIcon});
+`;
+
+export const PasswordInput = styled(Input)`
+  padding-left: 40px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-image: url(${LockIcon});
 `;
 
 
