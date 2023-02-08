@@ -1,24 +1,35 @@
-
 import ImgRegistration from "../../assets/Raffly.svg"
-import React, { useState } from 'react';
-import { Form, UserInput, PasswordInput, Button, Img, Main, Paragraph } from './style';
+import { Form, Button, InputContainer, Img, Main, Paragraph, InputBox } from './style';
+import InputComponent from "../../components/InputComponent";
+import { InputIcon } from "../../components/InputIcon";
+import * as Icon from "phosphor-react";
+import { ButtonRegistration } from "../../components/ButtonRegistration";
+import { ButtonApresentaion } from "../../components/ButtonApresentaion";
+
+
 
 const RegistrationScreen = () => {
+
   return (
     <Main>
       <Img src={ImgRegistration} alt="imagem de cadastro" />
       <Paragraph>Crie seu cadastro</Paragraph>
+      <InputContainer>
+
       <Form>
-          <UserInput
-            type="email"
-            placeholder="E-mail"
-          />
-          <PasswordInput
-            type="password"
-            placeholder="Password"
-          />
-        <Button type="submit">Criar seu cadastro</Button>
+        <InputBox>
+        <InputIcon icon={<Icon.Envelope size={26}/>}/>
+        <InputComponent type="text" placeholder="Email" />
+        </InputBox>
+
+        <InputBox>
+        <InputIcon icon={<Icon.Lock size={26} color="#A0AEC0"/>}/>
+        <InputComponent type="password" placeholder="Password" />
+        </InputBox>
+        
+        <ButtonRegistration path="/"></ButtonRegistration>
       </Form>
+      </InputContainer>
       <Img />
     </Main>
   );

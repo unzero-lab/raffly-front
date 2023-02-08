@@ -13,6 +13,7 @@ export function Router() {
       <Route path="/apresentacao2" element={<PresentationTwo />} />
       <Route path="/apresentacao3" element={<PresentationThree />} />
       <Route path="/cadastro" element={<RegistrationScreen />} />
+      <Route path="/perfil" element={<Welcomescreen />} />
     </Routes>
   );
 }
