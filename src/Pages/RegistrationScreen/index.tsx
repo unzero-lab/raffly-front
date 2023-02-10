@@ -7,7 +7,6 @@ import { ButtonRegistration } from "../../components/ButtonRegistration";
 import { ButtonApresentaion } from "../../components/ButtonApresentaion";
 
 
-
 const RegistrationScreen = () => {
 
   return (
