@@ -1,24 +1,18 @@
 import styled from "styled-components";
 
-export const Main = styled.div
-`
-max-width: 800px;
-height: 100vh;
-width: 100%;
-margin: 0 auto;
-padding: 0px 18px;
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-align-items: center;
-`
-export const Img = styled.img`
-<<<<<<< HEAD
-max-width: 355px;
-width: 100%;
-`
+export const Main = styled.div`
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: end;
+  height: 100vh;
+  padding: 0 18px;
+`;
 
-=======
+export const Img = styled.img`
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
@@ -28,25 +22,13 @@ width: 100%;
     width: 100%;
   }
 `;
->>>>>>> d8e17f3d289e3259af7c0ce6c97b6dd37d76632a
 export const Text = styled.div`
-  margin-bottom: 3.75rem;
+  //margin-bottom: 3.75rem;
   padding: 0px;
-`
-export const Title = styled.h1`
-<<<<<<< HEAD
-font-size: 2rem;
-text-align: center;
-margin-top: 1.875rem;
-color: ${(props) => props.theme["green-500"]};
-`
-export const Paragraph = styled.p`
+  align-self: start;
+`;
 
-margin-bottom: 5.25rem;
-text-align: center;
-font-size: 0.875em;
-`
-=======
+export const Title = styled.h1`
   font-size: 2rem;
   text-align: center;
   margin-top: 1.875rem;
@@ -74,4 +56,3 @@ export const Paragraph = styled.p`
     margin-bottom: 40px;
   }
 `;
->>>>>>> d8e17f3d289e3259af7c0ce6c97b6dd37d76632a
