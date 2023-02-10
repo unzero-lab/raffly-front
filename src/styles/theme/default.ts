@@ -4,6 +4,7 @@ export const defaultTheme = {
 
   "gray-500": "#7A7D84",
   "gray-900": "#1D1D1F",
+  placeholder: "#A0AEC0",
 
   "green-500": "#1BAC4B",
 
