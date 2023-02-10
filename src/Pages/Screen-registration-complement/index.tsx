@@ -11,16 +11,15 @@ export function ScreenRegistrationComplement() {
       </Header>
 
       <form action="">
-        <Input type="text" placeholder="Nome" />
-        <Input type="text" placeholder="Nome" />
-        <Input type="text" placeholder="Nome" />
+        <Input type="text" placeholder="Nome completo" />
+        <Input type="date" placeholder="Data de nascimento" />
 
         <InputGroupState>
-          <Input type="text" placeholder="Nome" />
+          <Input type="text" placeholder="Cidade" />
           <Input type="text" placeholder="UF" />
         </InputGroupState>
 
-        <Input type="text" placeholder="Nome" />
+        <Input type="text" placeholder="Telefone" />
         <Button>Confirmar</Button>
       </form>
     </Main>

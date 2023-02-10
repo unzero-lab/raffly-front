@@ -35,6 +35,13 @@ export const Input = styled.input`
 
   margin-bottom: 16px;
 
+  &[type="date"]::placeholder {
+    color: ${(props) => props.theme["placeholder"]};
+  }
+
+  &::placeholder {
+    color: ${(props) => props.theme["placeholder"]};
+  }
   &::placeholder {
     color: ${(props) => props.theme["placeholder"]};
   }
