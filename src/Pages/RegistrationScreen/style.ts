@@ -1,7 +1,5 @@
 import { Center } from "@chakra-ui/react";
 import styled from 'styled-components';
-//import { UserIcon, LockIcon } from 'phosphor-icons';
-//import { SearchIcon as UnstyledSearchIcon } from '@phosphor/icons/icon/icon';
 
 export const Main = styled.div`
   max-width: 800px;
@@ -46,23 +44,57 @@ export const InputContainer = styled.div`
   color: #A0AEC0;
 `;
 
-
 export const Form = styled.form`
   width: 100%;
   flex-direction: column;
 `;
 
 export const InputBox = styled.div` 
-    background: white;
-    padding: 5px;
-    padding-left: 10px;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    border: 1px solid #E2E8F0;
-    border-radius: 5px;
-    
+  display: flex;
+  background: white;
+
+  padding: 14px 16px;
+  margin-bottom: 16px;
+
+  padding-left: 16px;
+  align-items: center;
+  margin-top: 10px;
+  border: 1px solid #E2E8F0;
+  border-radius: 5px;
+  
+  svg{ 
+        display: flex;
+        align-items: center;
+   }
 `;
+
+export const Input = styled.input`
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  &:focus {
+    outline-style: none;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: ${(props) => props.theme["placeholder"]};
+  }
+  &::placeholder {
+    color: ${(props) => props.theme["placeholder"]};
+  }
+
+  &:focus {
+    outline-style: none;
+    box-shadow: none;
+  } 
+`;
+
+
 
 export const Button = styled.button`
   width: 100%;

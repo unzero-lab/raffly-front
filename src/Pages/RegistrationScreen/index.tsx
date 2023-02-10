@@ -7,12 +7,10 @@ import {
   Main,
   Paragraph,
   InputBox,
+  Input,
 } from "./style";
-import InputComponent from "../../components/InputComponent";
 import { InputIcon } from "../../components/InputIcon";
-import * as Icon from "phosphor-react";
-import { ButtonRegistration } from "../../components/ButtonRegistration";
-import { ButtonApresentaion } from "../../components/ButtonApresentaion";
+import { Envelope, Lock } from "phosphor-react";
 
 const RegistrationScreen = () => {
   return (
@@ -20,18 +18,18 @@ const RegistrationScreen = () => {
       <Img src={ImgRegistration} alt="imagem de cadastro" />
       <Paragraph>Crie seu cadastro</Paragraph>
       <InputContainer>
-        <Form>
+        <Form action="">
           <InputBox>
-            <InputIcon icon={<Icon.Envelope size={26} />} />
-            <InputComponent type="text" placeholder="Email" />
+            <InputIcon icon={<Envelope size={26} />} />
+            <Input type="text" placeholder="E-mail" />
           </InputBox>
 
           <InputBox>
-            <InputIcon icon={<Icon.Lock size={26} color="#A0AEC0" />} />
-            <InputComponent type="password" placeholder="Password" />
+            <InputIcon icon={<Lock size={26} color="#A0AEC0" />} />
+            <Input type="password" placeholder="Password" />
           </InputBox>
 
-          <ButtonRegistration path="/complemento-de-cadastro"></ButtonRegistration>
+          <Button type="submit">Criar seu cadastro</Button>
         </Form>
       </InputContainer>
       <Img />
