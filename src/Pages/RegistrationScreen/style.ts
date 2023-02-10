@@ -98,7 +98,6 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   width: 100%;
-  text-size: 18px;
   padding: 10px;
   background: ${(props) => props.theme["green-500"]};
   border: none;
