@@ -31,7 +31,7 @@ const RegistrationScreen = () => {
             <InputComponent type="password" placeholder="Password" />
           </InputBox>
 
-          <ButtonRegistration path="/"></ButtonRegistration>
+          <ButtonRegistration path="/complemento-de-cadastro"></ButtonRegistration>
         </Form>
       </InputContainer>
       <Img />
