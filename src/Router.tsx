@@ -4,6 +4,7 @@ import { PresentationThree } from "./Pages/Presentation/PresentationThree";
 import { PresentationTwo } from "./Pages/Presentation/PresentationTwo";
 import { Welcomescreen } from "./Pages/Presentation/Welcomescreen";
 import RegistrationScreen from "./Pages/RegistrationScreen";
+import { LoginScreen } from "./Pages/LoginScreen";
 import { ScreenRegistrationComplement } from "./Pages/Screen-registration-complement";
 
 export function Router() {
@@ -14,6 +15,7 @@ export function Router() {
       <Route path="/apresentacao2" element={<PresentationTwo />} />
       <Route path="/apresentacao3" element={<PresentationThree />} />
       <Route path="/cadastro" element={<RegistrationScreen />} />
+      <Route path="/login" element={<LoginScreen />} />
       <Route
         path="/complemento-de-cadastro"
         element={<ScreenRegistrationComplement />}
