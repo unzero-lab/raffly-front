@@ -1,37 +1,39 @@
 import ImgRegistration from "../../assets/Raffly.svg";
-import React, { useState } from "react";
 import {
   Form,
-  InputContainer,
-  Input,
   Button,
+  InputContainer,
   Img,
   Main,
   Paragraph,
+  InputBox,
 } from "./style";
-import { useNavigate } from "react-router";
+import InputComponent from "../../components/InputComponent";
+import { InputIcon } from "../../components/InputIcon";
+import * as Icon from "phosphor-react";
+import { ButtonRegistration } from "../../components/ButtonRegistration";
+import { ButtonApresentaion } from "../../components/ButtonApresentaion";
 
 const RegistrationScreen = () => {
-  const navigate = useNavigate();
-
-  function handlenavigate() {
-    navigate("/complemento-de-cadastro");
-  }
   return (
     <Main>
       <Img src={ImgRegistration} alt="imagem de cadastro" />
       <Paragraph>Crie seu cadastro</Paragraph>
-      <Form>
-        <InputContainer>
-          <Input type="email" placeholder="E-mail" />
-        </InputContainer>
-        <InputContainer>
-          <Input type="password" placeholder="Password" />
-        </InputContainer>
-        <Button onClick={handlenavigate} type="submit">
-          Criar seu cadastro
-        </Button>
-      </Form>
+      <InputContainer>
+        <Form>
+          <InputBox>
+            <InputIcon icon={<Icon.Envelope size={26} />} />
+            <InputComponent type="text" placeholder="Email" />
+          </InputBox>
+
+          <InputBox>
+            <InputIcon icon={<Icon.Lock size={26} color="#A0AEC0" />} />
+            <InputComponent type="password" placeholder="Password" />
+          </InputBox>
+
+          <ButtonRegistration path="/"></ButtonRegistration>
+        </Form>
+      </InputContainer>
       <Img />
     </Main>
   );
