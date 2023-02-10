@@ -17,7 +17,6 @@ export const Img = styled.img`
   width: 100%;
   margin: 0 auto;
   align-self: center;
-
   @media (min-width: 1000px) {
     max-width: 500px;
     width: 100%;
@@ -34,7 +33,6 @@ export const Title = styled.h1`
   text-align: center;
   margin-top: 1.875rem;
   color: ${(props) => props.theme["green-500"]};
-
   @media (min-height: 750px) {
     font-size: 2.5rem;
   }
@@ -51,11 +49,9 @@ export const Paragraph = styled.p`
   @media (min-height: 750px) {
     font-size: 1.25rem;
   }
-
   @media (min-height: 920px) {
     font-size: 1.5rem;
   }
-
   @media (min-width: 1000px) {
     margin-bottom: 40px;
   }

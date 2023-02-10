@@ -16,6 +16,12 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+
+  //add typeRoot to fix the problem about phosphoricons lib
+  "typeRoots": [
+    "./typings",
+    "./node_modules/@types/"
+  ],
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
