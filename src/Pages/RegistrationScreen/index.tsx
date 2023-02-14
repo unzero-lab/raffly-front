@@ -1,17 +1,7 @@
-import ImgRegistration from "../../assets/Raffly.svg";
-import {
-  Form,
-  Button,
-  InputContainer,
-  Img,
-  Main,
-  Paragraph,
-  InputBox,
-  Input,
-} from "./style";
+import ImgRegistration from "../../assets/Raffly.svg"
+import { Form, Button, InputContainer, Img, Main, Paragraph, InputBox, Input } from './style';
 import { InputIcon } from "../../components/InputIcon";
-import * as Icon from "phosphor-react";
-
+import { Envelope, Lock } from "phosphor-react";
 
 
 const RegistrationScreen = () => {
@@ -23,16 +13,16 @@ const RegistrationScreen = () => {
 
       <Form>
         <InputBox>
-        <InputIcon icon={<Icon.Envelope size={26}/>}/>
+        <InputIcon icon={<Envelope size={26}/>}/>
         <Input type="text" placeholder="Email" />
         </InputBox>
 
         <InputBox>
-        <InputIcon icon={<Icon.Lock size={26} color="#A0AEC0"/>}/>
+        <InputIcon icon={<Lock size={26} color="#A0AEC0"/>}/>
         <Input type="password" placeholder="Password" />
         </InputBox>
         
-        <Button type="submit">Criar seu cadastro</Button>
+        <Button>Criar seu cadastro</Button>
       </Form>
       </InputContainer>
       <Img />
