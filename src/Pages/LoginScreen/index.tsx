@@ -1,6 +1,6 @@
+import ImgLogo from "../../assets/Raffly.svg";
 import { useNavigate } from "react-router";
-import { ButtonApresentaion } from "../../components/ButtonApresentaion";
-import { Main, Form, InputContainer, Input, Button } from "./style";
+import { Main, Img, Form, InputContainer, Input, Button } from "./style";
 
 export function LoginScreen() {
   const navigate = useNavigate();
@@ -10,6 +10,7 @@ export function LoginScreen() {
   }
   return (
     <Main>
+      <Img src={ImgLogo} alt="Logo Raffy"/>
       <Form>
         <InputContainer>
           <Input type="email" placeholder="E-mail"></Input>
