@@ -10,6 +10,7 @@ export const Main = styled.div`
       flex-direction: column;
       margin: 0 auto;
       height: 100vh;
+      padding: 0px 18px;
 `;
 
 export const Form = styled.form`
