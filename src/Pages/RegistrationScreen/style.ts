@@ -61,11 +61,6 @@ export const InputBox = styled.div`
   margin-top: 10px;
   border: 1px solid #E2E8F0;
   border-radius: 5px;
-  
-  &:focus {
-    border: ${(props) => props.theme["green-500"]};
-} 
-
 
   svg{ 
         display: flex;
