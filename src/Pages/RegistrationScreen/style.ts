@@ -62,6 +62,11 @@ export const InputBox = styled.div`
   border: 1px solid #E2E8F0;
   border-radius: 5px;
   
+  &:focus {
+    border: ${(props) => props.theme["green-500"]};
+} 
+
+
   svg{ 
         display: flex;
         align-items: center;
@@ -84,13 +89,10 @@ export const Input = styled.input`
   &::placeholder {
     color: ${(props) => props.theme["placeholder"]};
   }
-  &::placeholder {
-    color: ${(props) => props.theme["placeholder"]};
-  }
 
   &:focus {
     outline-style: none;
-    box-shadow: none;
+    box-shadow: none;    
   } 
 `;
 
