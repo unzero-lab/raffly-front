@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-      max-width: 800px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      justify-self: center;
-      flex-direction: column;
-      margin: 0 auto;
-      height: 100vh;
-      padding: 0px 18px;
-      font-family: 'Rubik';
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 0px 18px;
+  font-family: "Rubik";
 `;
 
 export const Paragraph = styled.p`
@@ -28,10 +28,9 @@ export const Form = styled.form`
   flex-direction: column;
 `;
 
-
 export const Img = styled.img`
   max-width: 150px;
-  margin-bottom: 30px;
+  margin-top: 0px;
 `;
 
 export const InputContainer = styled.div`
@@ -39,15 +38,62 @@ export const InputContainer = styled.div`
   align-items: center;
   background: white;
   width: 100%;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #e2e8f0;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 14px 16px;
+`;
+
+export const InputBox = styled.div`
+  display: flex;
+  background: white;
+
+  padding: 14px 16px;
+  margin-bottom: 16px;
+
+  padding-left: 16px;
+  align-items: center;
+  margin-top: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+
+  svg {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const Input = styled.input`
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  &:focus {
+    outline-style: none;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: ${(props) => props.theme["placeholder"]};
+  }
+
+  &:focus {
+    outline-style: none;
+    box-shadow: none;
+  }
 `;
 
 export const ContainerLinkCheck = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Link = styled.a`
@@ -61,11 +107,9 @@ export const ContainerCheck = styled.div`
 `;
 
 export const Check = styled.input`
-
-    margin-right: 5px;
-    &:checked {
-     
-    }
+  margin-right: 5px;
+  &:checked {
+  }
 `;
 
 export const Label = styled.label`
@@ -78,21 +122,20 @@ export const Button = styled.button`
   border: none;
   border-radius: 6px;
   padding: 10px;
-  color: ${(props) => props.theme["white"]};;
+  color: ${(props) => props.theme["white"]};
   margin-top: 30px;
 `;
 
-
 export const Footer = styled.div`
-    margin-top: 130px;
-    display: flex;
-    justify-content: center;
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
 `;
 
 export const Span = styled.span`
-    font-size: 16px;
+  font-size: 16px;
 `;
 
 export const LinkCad = styled.a`
-    color: ${(props) => props.theme["green-500"]};
+  color: ${(props) => props.theme["green-500"]};
 `;
