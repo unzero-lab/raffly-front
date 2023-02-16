@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-      max-width: 500px;
+      max-width: 800px;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -11,6 +11,13 @@ export const Main = styled.div`
       margin: 0 auto;
       height: 100vh;
       padding: 0px 18px;
+      font-family: 'Rubik';
+`;
+
+export const Paragraph = styled.p`
+  font-size: 28px;
+  margin-bottom: 15px;
+  margin-top: 50px;
 `;
 
 export const Form = styled.form`
@@ -28,17 +35,42 @@ export const Img = styled.img`
 `;
 
 export const InputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  background: white;
   width: 100%;
+  border: 1px solid #E2E8F0;
+  border-radius: 5px;
+  padding: 5px 10px;
 `;
 
-export const Input = styled.input`
-  width: 100%;
-  padding: 15px 20px;
-  border: none;
-  font-size: 18px;
-  color: ${(props) => props.theme["gray-500"]};
+export const ContainerLinkCheck = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 `;
 
+export const Link = styled.a`
+  color: ${(props) => props.theme["gray-900"]};
+  font-size: 12px;
+`;
+
+export const ContainerCheck = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const Check = styled.input`
+
+    margin-right: 5px;
+    &:checked {
+     
+    }
+`;
+
+export const Label = styled.label`
+  font-size: 12px;
+`;
 
 export const Button = styled.button`
   width: 100%;
@@ -48,4 +80,19 @@ export const Button = styled.button`
   padding: 10px;
   color: ${(props) => props.theme["white"]};;
   margin-top: 30px;
+`;
+
+
+export const Footer = styled.div`
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+`;
+
+export const Span = styled.span`
+    font-size: 16px;
+`;
+
+export const LinkCad = styled.a`
+    color: ${(props) => props.theme["green-500"]};
 `;
