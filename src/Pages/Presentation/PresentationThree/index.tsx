@@ -13,7 +13,7 @@ export function PresentationThree() {
           Ipsum has been the industry's standard dummy text ever
         </Paragraph>
       </Text>
-      <ButtonApresentaion path="/cadastro" />
+      <ButtonApresentaion path="/login" />
     </Main>
   );
 }
