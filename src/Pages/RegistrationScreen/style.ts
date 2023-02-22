@@ -102,3 +102,7 @@ export const Button = styled.button`
   border-radius: 6px;
   margin-top: 30px;
 `;
+
+export const ErrorMessage = styled.div`
+  color: red;
+`;
