@@ -16,15 +16,15 @@
       }
     },
     {
-      "name": "Lud",
-      "gender": "Femele",
+      "name": "",
+      "gender": "FAMELE",
       "addrees": {
-        "city": "Belém",
-        "country": "Brasil",
-        "state": "PA",
-        "zipCode": "67115130"
+        "city": "",
+        "country": "",
+        "zipCode": ""
       },
-      "phone": "91982750306",
+      "dateOfBirth": "21212-02-11",
+      "phone": "",
       "id": 2
     }
   ]

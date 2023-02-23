@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import InputMask from "react-input-mask";
 
 export const Main = styled.section`
   height: 100vh;
@@ -27,12 +28,14 @@ export const Header = styled.div`
 
 export const Form = styled.form``;
 
+export const Label = styled.label``;
+
 export const Input = styled.input`
   border: 1px solid #dcdcdc;
   border-radius: 6px;
   width: 100%;
   padding: 13px 16px;
-
+  margin-top: 4px;
   margin-bottom: 16px;
 
   &[type="date"]::placeholder {
@@ -44,6 +47,44 @@ export const Input = styled.input`
   }
   &::placeholder {
     color: ${(props) => props.theme["placeholder"]};
+  }
+
+  &[type="date"]::placeholder {
+    color: red;
+  }
+`;
+
+export const MaskInput = styled(InputMask)`
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  width: 100%;
+  padding: 13px 16px;
+  margin-bottom: 16px;
+
+  &[type="date"]::placeholder {
+    color: ${(props) => props.theme["placeholder"]};
+  }
+
+  &::placeholder {
+    color: ${(props) => props.theme["placeholder"]};
+  }
+  &::placeholder {
+    color: ${(props) => props.theme["placeholder"]};
+  }
+`;
+
+export const Select = styled.select`
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  width: 100%;
+  padding: 13px 16px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+
+  option {
+    font-size: 1rem;
+    margin: 5px;
+    color: ${(props) => props.theme["gray-900"]};
   }
 `;
 
