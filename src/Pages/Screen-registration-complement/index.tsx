@@ -29,7 +29,7 @@ const newRegisterComplementarySchema = z.object({
   country: z.string(),
   zipCode: z.string().min(8, { message: "CEP precisa ter 8 números" }),
   date: z.date().optional(),
-  avatar: z.string(),
+  avatar: z.string().optional(),
 });
 
 type newRegisterComplementaryFormInput = z.infer<
@@ -83,7 +83,7 @@ export function ScreenRegistrationComplement() {
       zipCode,
     };
 
-    const response = await api.put(`provaider_user/${id}`, {
+    const response = await api.patch(`provaider_user/${id}`, {
       name,
       gender,
       addrees,
