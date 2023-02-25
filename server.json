@@ -12,19 +12,20 @@
         "city": "Belém",
         "state": "PA",
         "country": "Brasil",
-        "zipCode": 67115130
+        "zipCode": "67115-130"
       }
     },
     {
-      "name": "",
-      "gender": "FAMELE",
+      "name": "Von Harrison",
+      "gender": "MALE",
       "addrees": {
-        "city": "",
-        "country": "",
-        "zipCode": ""
+        "city": "Ananindeua",
+        "country": "Brasil",
+        "state": "PA",
+        "zipCode": "67115-130"
       },
-      "dateOfBirth": "21212-02-11",
-      "phone": "",
+      "dateOfBirth": "1997-12-05",
+      "phone": "(91) 98275-0306",
       "id": 2
     }
   ]

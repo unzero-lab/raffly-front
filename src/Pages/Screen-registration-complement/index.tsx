@@ -11,7 +11,7 @@ import {
 } from "./style";
 import Avatar from "../../assets/Avatar.png";
 import { useForm } from "react-hook-form";
-import { api } from "../../lib/axios";
+import { api, apiCep } from "../../lib/axios";
 import { useState } from "react";
 
 enum Gender {
@@ -33,7 +33,8 @@ interface PropsProvaiderUser {
 }
 
 export function ScreenRegistrationComplement() {
-  const { register, handleSubmit, reset, resetField, watch } =
+  const [typeInput, setTypeInput] = useState("text");
+  const { register, handleSubmit, reset, resetField, watch, setValue } =
     useForm<PropsProvaiderUser>({
       mode: "onChange",
       defaultValues: {
@@ -43,6 +44,7 @@ export function ScreenRegistrationComplement() {
       },
     });
   let id = 2;
+
   async function handleUpadateProvaiderUser(data: PropsProvaiderUser) {
     const { name, gender, dateOfBirth, phone, city, country, state, zipCode } =
       data;
@@ -68,8 +70,17 @@ export function ScreenRegistrationComplement() {
     }
   }
 
-  const [teste, setTeste] = useState("text");
-  const [teste2, setTeste2] = useState("text");
+  async function handleCep() {
+    console.log(watch("zipCode"));
+    const response = await apiCep.get(`${watch("zipCode")}/json/`);
+
+    if (response.statusText) {
+      setValue("zipCode", response.data.cep);
+      setValue("city", response.data.localidade);
+      setValue("state", response.data.uf);
+    }
+  }
+
   return (
     <Main>
       <Title>Preencha seu perfil</Title>
@@ -94,24 +105,30 @@ export function ScreenRegistrationComplement() {
         </Select>
 
         <Input
-          type={teste}
+          type={typeInput}
           placeholder="Data de nascimento"
           onFocus={(e) => {
-            setTeste("date");
+            setTypeInput("date");
           }}
           {...register("dateOfBirth", { required: true })}
         />
 
         <Input type="text" placeholder="Pais" {...register("country")} />
-        <MaskInput
-          mask="99999-999"
+
+        <Input
           type="text"
           placeholder="CEP"
           {...register("zipCode")}
+          onBlur={handleCep}
         />
 
         <InputGroupState>
-          <Input type="text" placeholder="Cidade" {...register("city")} />
+          <Input
+            disabled
+            type="text"
+            placeholder="Cidade"
+            {...register("city")}
+          />
 
           <Input disabled type="text" placeholder="UF" {...register("state")} />
         </InputGroupState>
