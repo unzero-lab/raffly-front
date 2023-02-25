@@ -1,16 +1,35 @@
 {
-  "user": [
+  "provaider_user": [
     {
       "id": 1,
       "name": "Adriel",
-      "email": "income",
-      "password": "email"
+      "email": "AdrielTeste@raffley.com.br",
+      "password": "12345",
+      "gender": "masculino",
+      "dateOfBirth": "date",
+      "phone": "string",
+      "address": {
+        "city": "Belém",
+        "state": "PA",
+        "country": "Brasil",
+        "zipCode": "67115-130"
+      }
     },
     {
       "id": 2,
-      "name": "Adriel",
-      "email": "income",
-      "password": "email"
+      "name": "Mara",
+      "email": "AdrielTeste@raffley.com.br",
+      "password": "12345",
+      "gender": "MALE",
+      "dateOfBirth": "1997-12-05",
+      "phone": "11 11111 1111",
+      "addrees": {
+        "city": "Ananindeua",
+        "country": "Brasil",
+        "state": "PA",
+        "zipCode": "67115-130"
+      },
+      "avatar": "blob:http://127.0.0.1:5173/15b01e46-49c1-4389-b8f0-10f5f3cbd864"
     }
   ]
 }
