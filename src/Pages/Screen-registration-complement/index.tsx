@@ -16,6 +16,7 @@ import {
   Select,
   MaskInput,
   Error,
+  InputFile,
 } from "./style";
 
 const newRegisterComplementarySchema = z.object({
@@ -28,33 +29,17 @@ const newRegisterComplementarySchema = z.object({
   country: z.string(),
   zipCode: z.string().min(8, { message: "CEP precisa ter 8 números" }),
   date: z.date().optional(),
+  avatar: z.string(),
 });
 
 type newRegisterComplementaryFormInput = z.infer<
   typeof newRegisterComplementarySchema
 >;
 
-enum Gender {
-  MALE = "male",
-  FEMALE = "female",
-  OTHER = "other",
-}
-
-interface PropsProvaiderUser {
-  name: string;
-  gender: Gender | "";
-  dateOfBirth?: string;
-  phone?: string;
-  city?: string;
-  state?: string;
-  country?: string;
-  zipCode?: string | "";
-  date?: string;
-}
-
 export function ScreenRegistrationComplement() {
   const [typeInput, setTypeInput] = useState("text");
   const [errorCep, setErrorCep] = useState(false);
+  const [imgAvatar, setImegeAvatar] = useState("");
   let id = 2;
   const {
     register,
@@ -79,8 +64,17 @@ export function ScreenRegistrationComplement() {
   async function handleUpadateProvaiderUser(
     data: newRegisterComplementaryFormInput
   ) {
-    const { name, gender, dateOfBirth, phone, city, country, state, zipCode } =
-      data;
+    const {
+      name,
+      gender,
+      dateOfBirth,
+      phone,
+      city,
+      country,
+      state,
+      zipCode,
+      avatar,
+    } = data;
 
     const addrees = {
       city,
@@ -95,12 +89,19 @@ export function ScreenRegistrationComplement() {
       addrees,
       dateOfBirth,
       phone,
+      avatar,
     });
     console.log(response);
     if (response.statusText) {
       reset();
       resetField("zipCode");
     }
+  }
+
+  function handleImg(event: any) {
+    console.log(URL.createObjectURL(event.target.files[0]));
+    setValue("avatar", URL.createObjectURL(event.target.files[0]));
+    setImegeAvatar(URL.createObjectURL(event.target.files[0]));
   }
 
   async function handleCep(event: FormEvent) {
@@ -129,14 +130,31 @@ export function ScreenRegistrationComplement() {
     }
   }
 
-  console.log(errors.date?.message);
-  console.log(errors.gender?.message);
   return (
     <Main>
       <Title>Preencha seu perfil</Title>
       <Header>
-        <img src={Avatar} alt="" />
-        <p>Adicionar foto</p>
+        {imgAvatar ? (
+          <img src={imgAvatar} alt="" />
+        ) : (
+          <img src={Avatar} alt="" />
+        )}
+
+        <div>
+          <p>
+            {imgAvatar ? (
+              <label htmlFor="file">Editar foto</label>
+            ) : (
+              <label htmlFor="file">Adicionar foto</label>
+            )}
+          </p>
+          <InputFile
+            type="file"
+            id="file"
+            accept="image/*"
+            onChange={handleImg}
+          />
+        </div>
       </Header>
 
       <Form onSubmit={handleSubmit(handleUpadateProvaiderUser)}>

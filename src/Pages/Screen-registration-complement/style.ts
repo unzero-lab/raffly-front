@@ -18,11 +18,21 @@ export const Title = styled.h2`
 
 export const Header = styled.div`
   margin-top: 40px;
-
+  label {
+    cursor: pointer;
+  }
   p {
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 30px;
+    cursor: pointer;
+  }
+
+  img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    box-sizing: initial; /*ao adicinar bora em um elemento, faz ocupar um elemento a mais*/
   }
 `;
 
@@ -60,6 +70,10 @@ export const Input = styled.input`
   &[type="date"]::placeholder {
     color: red;
   }
+`;
+
+export const InputFile = styled.input`
+  display: none;
 `;
 
 export const MaskInput = styled(InputMask)`
