@@ -30,6 +30,14 @@ export const Form = styled.form``;
 
 export const Label = styled.label``;
 
+export const Error = styled.p`
+  color: red;
+  font-size: 0.875rem;
+  position: relative;
+  top: -12px;
+  left: 2px;
+`;
+
 export const Input = styled.input`
   border: 1px solid #dcdcdc;
   border-radius: 6px;
@@ -104,4 +112,10 @@ export const Button = styled.button`
 
   margin-top: 14px;
   margin-bottom: 20px;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    background: ${(props) => props.theme["green-200"]};
+  }
 `;

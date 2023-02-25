@@ -16,16 +16,16 @@
       }
     },
     {
-      "name": "Von Harrison",
+      "name": "teste",
       "gender": "MALE",
       "addrees": {
         "city": "Ananindeua",
         "country": "Brasil",
         "state": "PA",
-        "zipCode": "67115-130"
+        "zipCode": "67140-090"
       },
-      "dateOfBirth": "1997-12-05",
-      "phone": "(91) 98275-0306",
+      "dateOfBirth": "2023-02-24",
+      "phone": "91 98275 0306",
       "id": 2
     }
   ]
