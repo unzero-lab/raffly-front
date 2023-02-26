@@ -3,7 +3,7 @@ import { PresentationOne } from "./Pages/Presentation/PresentationOne";
 import { PresentationThree } from "./Pages/Presentation/PresentationThree";
 import { PresentationTwo } from "./Pages/Presentation/PresentationTwo";
 import { Welcomescreen } from "./Pages/Presentation/Welcomescreen";
-import RegistrationScreen from "./Pages/RegistrationScreen";
+import { RegistrationScreen } from "./Pages/RegistrationScreen";
 import { LoginScreen } from "./Pages/LoginScreen";
 import { ScreenRegistrationComplement } from "./Pages/Screen-registration-complement";
 
