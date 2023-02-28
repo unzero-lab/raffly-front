@@ -103,6 +103,10 @@ export const Button = styled.button`
   margin-top: 30px;
 `;
 
-export const ErrorMessage = styled.div`
+export const Error = styled.p`
   color: red;
+  font-size: 0.875rem;
+  position: relative;
+  top: -12px;
+  left: 2px;
 `;
