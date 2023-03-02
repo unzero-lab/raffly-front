@@ -5,7 +5,7 @@ import { FooterContainer } from "./style";
 export function Footer() {
   return (
     <FooterContainer>
-      <NavLink to="/">
+      <NavLink to="/home">
         <CheckSquareOffset size={32} />
       </NavLink>
       <button>
