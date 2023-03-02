@@ -8,6 +8,7 @@ import { LoginScreen } from "./Pages/LoginScreen";
 import { ScreenRegistrationComplement } from "./Pages/Screen-registration-complement";
 import { Home } from "./Pages/Home";
 import { DefaulrLayout } from "./components/DefaultLayout";
+import { ProtectedRouter } from "./components/ProtectedRoute";
 
 export function Router() {
   return (
@@ -18,9 +19,15 @@ export function Router() {
       <Route path="/apresentacao3" element={<PresentationThree />} />
       <Route path="/cadastro" element={<RegistrationScreen />} />
       <Route path="/login" element={<LoginScreen />} />
-      <Route path="/home" element={<DefaulrLayout />}>
+
+      {/**Rota home */}
+      <Route
+        path="/home"
+        element={<ProtectedRouter children={<DefaulrLayout />} />}
+      >
         <Route path="/home" element={<Home />} />
       </Route>
+
       <Route
         path="/complemento-de-cadastro"
         element={<ScreenRegistrationComplement />}
