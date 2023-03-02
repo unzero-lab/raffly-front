@@ -12,6 +12,15 @@ export const FooterContainer = styled.footer`
   a {
     display: flex;
     align-items: center;
+    svg {
+      color: ${(props) => props.theme["gray-900"]};
+    }
+
+    &.active {
+      svg {
+        color: ${(props) => props.theme["green-500"]};
+      }
+    }
   }
 
   button {
