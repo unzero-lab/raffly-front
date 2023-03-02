@@ -5,13 +5,13 @@ import { FooterContainer } from "./style";
 export function Footer() {
   return (
     <FooterContainer>
-      <NavLink to="#">
+      <NavLink to="/">
         <CheckSquareOffset size={32} />
       </NavLink>
       <button>
         <Plus size={28} weight="bold" />
       </button>
-      <NavLink to="#">
+      <NavLink to="teste">
         <ListBullets size={32} />
       </NavLink>
     </FooterContainer>
