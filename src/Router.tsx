@@ -6,6 +6,8 @@ import { Welcomescreen } from "./Pages/Presentation/Welcomescreen";
 import { RegistrationScreen } from "./Pages/RegistrationScreen";
 import { LoginScreen } from "./Pages/LoginScreen";
 import { ScreenRegistrationComplement } from "./Pages/Screen-registration-complement";
+import { Home } from "./Pages/Home";
+import { DefaulrLayout } from "./components/DefaultLayout";
 
 export function Router() {
   return (
@@ -16,6 +18,9 @@ export function Router() {
       <Route path="/apresentacao3" element={<PresentationThree />} />
       <Route path="/cadastro" element={<RegistrationScreen />} />
       <Route path="/login" element={<LoginScreen />} />
+      <Route path="/home" element={<DefaulrLayout />}>
+        <Route path="/home" element={<Home />} />
+      </Route>
       <Route
         path="/complemento-de-cadastro"
         element={<ScreenRegistrationComplement />}

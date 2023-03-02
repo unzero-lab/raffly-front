@@ -28,11 +28,13 @@ export function LoginScreen() {
 
   function handleLogin(data: any) {
     console.log("senhs", data);
+    navigate("/home");
   }
 
   function handlenavigate() {
     navigate("/cadastro");
   }
+
   return (
     <Main>
       <Img src={ImgLogo} alt="Logo Raffy" />
