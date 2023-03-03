@@ -30,6 +30,81 @@
         "zipCode": "67115-130"
       },
       "avatar": "blob:http://127.0.0.1:5173/15b01e46-49c1-4389-b8f0-10f5f3cbd864"
+    },
+    {
+      "email": "von@teste.com",
+      "password": "12345678",
+      "name": "",
+      "gender": "",
+      "dateOfBirth": "",
+      "phone": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "zipCode": "",
+      "date": "",
+      "avatar": "",
+      "id": 3
+    },
+    {
+      "email": "lud@gmail.com.br",
+      "password": "12345678",
+      "name": "Ludmila Silva Santos",
+      "gender": "",
+      "dateOfBirth": "",
+      "phone": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "zipCode": "",
+      "date": "",
+      "avatar": "",
+      "id": 4
+    },
+    {
+      "email": "adriel@gmail.com",
+      "password": "123ssdfses",
+      "name": "Adrial da silva silva",
+      "gender": "",
+      "dateOfBirth": "",
+      "phone": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "zipCode": "",
+      "date": "",
+      "avatar": "",
+      "id": 5
+    },
+    {
+      "email": "teste@teste.com",
+      "password": "12345678",
+      "name": "teste",
+      "gender": "",
+      "dateOfBirth": "",
+      "phone": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "zipCode": "",
+      "date": "",
+      "avatar": "",
+      "id": 6
+    },
+    {
+      "email": "teste2@teste.com",
+      "password": "1223423423",
+      "name": "teste1",
+      "gender": "",
+      "dateOfBirth": "",
+      "phone": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "zipCode": "",
+      "date": "",
+      "avatar": "",
+      "id": 7
     }
   ]
 }
