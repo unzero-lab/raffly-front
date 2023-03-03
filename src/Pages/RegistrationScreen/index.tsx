@@ -14,9 +14,10 @@ import {
 import { Envelope, Lock } from "phosphor-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 
 const newRegisterSchema = z.object({
-  email: z.string().email({ message: "email inválido "}),
+  email: z.string().email({ message: "E-mail inválido "}),
   password: z.string().min(8, { message: "A senha deve ter no mínimo 8 caracteres"}),
 });
 
@@ -37,10 +38,14 @@ export function RegistrationScreen () {
     },
    });
 
-  function handleRegistration(data: any) {
-    console.log(data);
+  function handleRegistration(data: newRegisterFormInput ) {
+    const {
+      email, 
+      password,
+    } = data;
+    console.log(data.email, data.password);
     reset();
-  }
+  };
 
   console.log(errors.email?.message);
 
