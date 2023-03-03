@@ -17,34 +17,11 @@ import {
   Span,
   LinkCad,
   Input,
-  Error,
 } from "./style";
 import { Envelope, Lock } from "phosphor-react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-
-const newRegisterSchema = z.object({
-  email: z.string().email({ message: "E-mail inválido " }),
-  password: z.string(),
-});
-
-type newRegisterFormInput = z.infer<typeof newRegisterSchema>;
 
 export function LoginScreen() {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<newRegisterFormInput>({
-    resolver: zodResolver(newRegisterSchema),
-
-    defaultValues: {
-      email: "",
-      password: "",
-    },
-  });
-
   const navigate = useNavigate();
 
   function handleLogin(data: any) {
