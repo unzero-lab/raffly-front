@@ -24,7 +24,6 @@ export const Form = styled.form`
   width: 100%;
   padding: 20px;
   display: flex;
-  gap: 20px;
   flex-direction: column;
 `;
 
@@ -41,6 +40,7 @@ export const InputContainer = styled.div`
   border: 1px solid #e2e8f0;
   border-radius: 5px;
   padding: 14px 16px;
+  margin: 12px 0 5px 0;
 `;
 
 export const InputBox = styled.div`
@@ -94,6 +94,7 @@ export const ContainerLinkCheck = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-top: 5px;
 `;
 
 export const Link = styled.a`
@@ -138,4 +139,10 @@ export const Span = styled.span`
 
 export const LinkCad = styled.a`
   color: ${(props) => props.theme["green-500"]};
+`;
+
+export const Error = styled.p`
+  color: red;
+  font-size: 0.875rem;
+  margin-left: 3px;
 `;
