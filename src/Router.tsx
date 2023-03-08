@@ -9,6 +9,7 @@ import { ScreenRegistrationComplement } from "./Pages/Screen-registration-comple
 import { Home } from "./Pages/Home";
 import { DefaulrLayout } from "./components/DefaultLayout";
 import { ProtectedRouter } from "./components/ProtectedRoute";
+import { RaffleRegistration } from "./Pages/RaffleRegistration";
 
 export function Router() {
   return (
@@ -26,6 +27,12 @@ export function Router() {
         element={<ProtectedRouter children={<DefaulrLayout />} />}
       >
         <Route path="/home" element={<Home />} />
+      </Route>
+      <Route
+        path="/rifas"
+        element={<ProtectedRouter children={<DefaulrLayout />} />}
+      >
+        <Route path="/rifas/criar_rifas" element={<RaffleRegistration />} />
       </Route>
 
       <Route
