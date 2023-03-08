@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { PresentationOne } from "./Pages/Presentation/PresentationOne";
 import { PresentationThree } from "./Pages/Presentation/PresentationThree";
 import { PresentationTwo } from "./Pages/Presentation/PresentationTwo";
@@ -9,8 +9,20 @@ import { ScreenRegistrationComplement } from "./Pages/Screen-registration-comple
 import { Home } from "./Pages/Home";
 import { DefaulrLayout } from "./components/DefaultLayout";
 import { ProtectedRouter } from "./components/ProtectedRoute";
+import { useEffect } from "react";
+import postMessage from "./utils/postmessage";
 
 export function Router() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const data = {
+      eventName: "routeChange",
+      router: location,
+      location: window.location,
+    };
+    postMessage(data);
+  }, [location]);
   return (
     <Routes>
       <Route path="/" element={<Welcomescreen />} />
