@@ -10,6 +10,7 @@ import { Home } from "./Pages/Home";
 import { DefaulrLayout } from "./components/DefaultLayout";
 import { ProtectedRouter } from "./components/ProtectedRoute";
 import { useEffect } from "react";
+import postMessage from "./utils/postmessage";
 
 export function Router() {
   const location = useLocation();
