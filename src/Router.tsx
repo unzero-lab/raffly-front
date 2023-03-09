@@ -43,10 +43,10 @@ export function Router() {
 
      {/**Rota tela para criar rifa*/}
       <Route
-        path="/criar-rifa"
+        path="/tutoria-rifa"
         element={<ProtectedRouter children={<DefaulrLayout />} />}
       >
-        <Route path="/criar-rifa" element={<ScreenCreateRaffle />} />
+        <Route path="/tutoria-rifa" element={<ScreenCreateRaffle />} />
       </Route>
 
       <Route
