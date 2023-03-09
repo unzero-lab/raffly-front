@@ -11,6 +11,7 @@ import { DefaulrLayout } from "./components/DefaultLayout";
 import { ProtectedRouter } from "./components/ProtectedRoute";
 import { useEffect } from "react";
 import postMessage from "./utils/postmessage";
+import { ScreenCreateRaffle } from "./Pages/Screen-create-raffle";
 
 export function Router() {
   const location = useLocation();
@@ -38,6 +39,14 @@ export function Router() {
         element={<ProtectedRouter children={<DefaulrLayout />} />}
       >
         <Route path="/home" element={<Home />} />
+      </Route>
+
+     {/**Rota tela para criar rifa*/}
+      <Route
+        path="/tutoria-rifa"
+        element={<ProtectedRouter children={<DefaulrLayout />} />}
+      >
+        <Route path="/tutoria-rifa" element={<ScreenCreateRaffle />} />
       </Route>
 
       <Route
