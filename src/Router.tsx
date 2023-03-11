@@ -28,6 +28,7 @@ export function Router() {
       >
         <Route path="/home" element={<Home />} />
       </Route>
+
       <Route
         path="/rifas"
         element={<ProtectedRouter children={<DefaulrLayout />} />}
